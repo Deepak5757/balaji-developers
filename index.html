@@ -35,7 +35,7 @@ function onYouTubePlayerAPIReady() {
       'autohide': 1,
       'loop': 1,
       'wmode':'opaque' },
-    videoId: '7tcJ99MU8dQ',
+    videoId: 'nh1aIMdDBp0',
     events: {
       'onReady': onPlayerReady}
   });
@@ -460,8 +460,15 @@ function onPlayerReady(event) {
             color: black;
         }
         .player-contain iframe#player{
-            width: 100vw;
+           
     height: 70vh;
+        }
+        @media (min-width: 640px) {
+           
+            .player-contain iframe#player{
+           
+                width: 100vw;
+               }
         }
     </style>
 </head>
@@ -525,7 +532,7 @@ function onPlayerReady(event) {
 
         <div class="container-fluid">
             <div class="row">
-                    <div class="player-contain">
+                    <div class="player-contain col-12">
   
                             <div id="player"></div>
                           </div>
@@ -895,10 +902,10 @@ function onPlayerReady(event) {
                 </div>
                 <div class="modal-body" style="padding-top: 0px;">
                         <iframe width="100%" height: 50%; controls
-                        src="https://www.youtube.com/embed/7_Q8yBOO4xQ">
+                        src="https://youtu.be/nh1aIMdDBp0">
                         </iframe>
                     <!-- <video width="100%" controls>
-                        <source src="https://www.youtube.com/embed/7_Q8yBOO4xQ" type="Video/mp4">
+                        <source src="https://youtu.be/nh1aIMdDBp0" type="Video/mp4">
                     </video> -->
                 </div>
             </div>
