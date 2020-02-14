@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tapestry | Coach, Kate Spade, &amp; Stuart Weitzman</title>
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTjiFFag2qnVRk0ruG9zYbGo9z--L7wliH7iBcgSEQPGgDJMiwy">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Slick CSS-->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+            // 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/player_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
+function onYouTubePlayerAPIReady() {
+  player = new YT.Player('player', {
+    playerVars: {
+        'autoplay': 1, 
+        'controls': 1, 
+      'controls': 0,
+      'autohide': 1,
+      'loop': 1,
+      'wmode':'opaque' },
+    videoId: '7tcJ99MU8dQ',
+    events: {
+      'onReady': onPlayerReady}
+  });
+}
+
+
+// 4. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+ event.target.mute();
+  //event.target.setPlaybackRate(0.5);
+} </script>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            width: fit-content;
+        }
+
+        body h1,
+        body h2,
+        body h3,
+        body h4,
+        body h5,
+        body h6 {
+            font-family: benton-modern-display, serif;
+        }
+
+        body p,
+        body span,
+        body a {
+            font-family: din-2014, sans-serif;
+            color: black;
+        }
+
+        .navbar-temp .navbar-container {
+            display: grid;
+            background-color: #ffdd00;
+        }
+
+        .navbar-temp .navbar-container .row.row-flex {
+            display: grid;
+            grid-template-columns: 20% 80%;
+        }
+
+        .navbar-temp .navbar-container .logo {
+            width: 90%;
+            margin: 0px 0px 0px 40px;
+        }
+
+        .navbar-temp .navbar-container .menu-main-menu-container-temp {
+            float: right !important;
+            padding-top: 65px;
+        }
+
+        .navbar-temp .navbar-container .menu-main-menu-container-temp li {
+            display: inline-block;
+            margin-right: 30px;
+            position: static;
+            float: left;
+            padding: -1px 0px 0 0px;
+        }
+
+        .navbar-temp .navbar-container .menu-main-menu-container-temp li a {
+            text-decoration: none;
+            padding: 0;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+
+        .scrollable {
+            transform: translateY(80px);
+            transition: transform 1000ms cubic-bezier(0, -0.005, 0.08, 1) 0s;
+        }
+
+        .scrollable {
+            width: 100% !important;
+            overflow: hidden;
+        }
+
+        .scrollable.slide_effect {
+            transform: translateY(0);
+        }
+
+        .row.row-flex {
+            display: flex;
+        }
+
+        .container .headline {
+            font-size: 124px;
+            font-style: italic;
+            line-height: 1.1;
+        }
+
+        .container h2.quote {
+            font-size: 34px;
+            line-height: 40px;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .container.chairman-info {
+            background-color: #ffdd00;
+        }
+
+        /* first section modal and video inline start */
+
+        .launch-modal {
+            position: relative;
+            top: -40px;
+            cursor: pointer;
+        }
+
+
+
+        .modal {
+            top: 50px;
+        }
+
+        @media (max-width: 576px) {
+            .modal-content {
+                width: 100%;
+                left: 0px;
+            }
+
+            .launch-modal {
+                width: 10%;
+                left: 80px;
+            }
+        }
+
+        @media (min-width: 576px) {
+            .launch-modal {
+                width: 377%;
+                left: 100px;
+            }
+
+        }
+
+        @media (min-width: 768px) {
+            .modal-content {
+                width: 140%;
+                left: -95px;
+            }
+
+            .launch-modal {
+                width: 200%;
+                left: 140px;
+            }
+
+        }
+
+        @media (min-width: 992px) {
+            .launch-modal {
+                width: 125%;
+                left: 150px;
+            }
+
+        }
+
+        @media (min-width: 1200px) {
+            .modal-content {
+                width: 194%;
+                margin-left: -130px;
+            }
+
+            .launch-modal {
+                width: 100%;
+                left: 190px;
+            }
+
+        }
+
+        .video-style {
+            margin-bottom: 10px;
+            margin-top: 0px;
+            padding: 0px;
+        }
+
+        .firstBlur.modalBlur>*:not(.modal) {
+            filter: blur(60px);
+        }
+
+        /* first section modal and video inline end */
+
+        /* Uttam */
+
+        @media (min-width: 320px) {
+            .container .headline {
+                font-size: 40px;
+                font-style: italic;
+                line-height: 1.1;
+            }
+
+            .subtext {
+                font-size: 51px;
+            }
+
+            .head_subtext {
+                font-size: 51px;
+            }
+
+            .subcopy {
+                font-size: 48px;
+            }
+
+            .subcopy {
+                font-size: 48px;
+            }
+
+            .container-fluid .subcopy_big {
+                font-size: 48px;
+            }
+
+            .subcopy1 {
+                font-size: 33px;
+            }
+
+            .subcta {
+                font-size: 41px;
+            }
+
+            .left_align {
+                margin-left: 0px;
+            }
+
+            .text-dark {
+                font-size: 2rem;
+                line-height: 2.0;
+            }
+
+            .container .headline {
+                font-size: 110px;
+
+            }
+
+            .container .headlineSubtextone {
+                margin-left: 0px;
+            }
+        }
+
+
+
+        @media (min-width: 996px) {
+            .container .headline {
+                font-size: 85px;
+                font-style: italic;
+                line-height: 1.1;
+            }
+        }
+
+        @media (min-width: 996px) {
+            .container .headlineSubtext {
+                margin-left: 14%
+            }
+        }
+
+        .headlineSubtextone {
+            margin-left: 28%;
+        }
+
+        .img-size {
+            width: 100%;
+            height: auto;
+            margin-right: 700px;
+        }
+
+
+        @media (min-width: 576px) {
+            body {
+                min-width: 480px;
+            }
+
+            .navbar-temp .navbar-container .menu-main-menu-container-temp {
+                padding-top: 10px;
+            }
+
+            .headlineSubtextone {
+                margin-left: 0%;
+            }
+
+            .left_space {
+                margin-left: 0%;
+            }
+
+            .container .headline {
+                font-size: 65px;
+
+            }
+
+            .container .subtext {
+                font-size: 33px;
+            }
+
+            .container .head_subtext {
+                font-size: 33px;
+            }
+
+            .container .subcopy {
+                font-size: 30px;
+            }
+
+            .container-fluid .subcopy_big {
+                font-size: 30px;
+            }
+
+        }
+
+        @media (min-width: 767px) {
+            .container .headline {
+                font-size: 60px;
+                font-style: italic;
+                line-height: 1.1;
+            }
+
+            .container .subtext {
+                font-size: 24px;
+            }
+
+            .head_subtext {
+                font-size: 24px;
+            }
+
+            .container .subcopy {
+                font-size: 20px;
+            }
+
+            .container .subcopy1 {
+                font-size: 19px;
+            }
+
+            .container .subcta {
+                font-size: 20px;
+            }
+
+            .container-fluid .subcopy_big {
+                font-size: 32px;
+            }
+
+            .container-fluid .subcopy1 {
+                font-size: 21px;
+            }
+
+            .text-dark {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            .left_align {
+                margin-left: 28%;
+            }
+
+            .left_align_subcta {
+                margin-left: 2%;
+            }
+
+        }
+
+        @media (min-width: 1200px) {
+            img {
+                width: 70px;
+            }
+
+            .container .subtext {
+                font-size: 15px;
+            }
+
+            .container .head_subtext {
+                font-size: 40px;
+            }
+
+            .container .subcopy {
+                font-size: 15px;
+            }
+
+            .container-fluid .subcopy1 {
+                font-size: 15px;
+            }
+
+            .container-fluid .subcopy_big {
+                font-size: 30px;
+            }
+
+            .container .subcopy1 {
+                font-size: 20px;
+            }
+
+            .subcta {
+                font-size: 18px;
+                letter-spacing: 1px;
+            }
+
+            .container .left_align {
+                margin-left: 24%;
+            }
+
+            .container-fluid .subcopy {
+                font-size: 17px;
+            }
+
+            .container-fluid .subtext {
+                font-size: 20px;
+            }
+
+        }
+
+        .img-left {
+            width: 100%;
+            height: auto;
+            margin-right: 700px;
+        }
+
+        .img-right {
+            width: 100%;
+            height: auto;
+            margin-left: 0px;
+        }
+
+        li:hover {
+            border-bottom: 1px solid white;
+            color: black;
+        }
+        .player-contain iframe#player{
+            width: 100vw;
+    height: 70vh;
+        }
+    </style>
+</head>
+
+<body class="firstBlur">
+    <div>
+        <div>
+            <nav class="navbar navbar-expand-md navbar-light sticky-top" id="nav-id"
+                style="background-color: #ffdd00;padding-bottom: 0px;">
+
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav"
+                    style="border-color: transparent;font-size: 50px;">
+                    <span class="navbar-toggler-icon">
+
+                    </span>
+                </button>
+                <div class="">
+                    <a class="nav-link px-3" href="https://www.tapestry.com/" rel="home">
+                        <img class="logo"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTjiFFag2qnVRk0ruG9zYbGo9z--L7wliH7iBcgSEQPGgDJMiwy"
+                            onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTjiFFag2qnVRk0ruG9zYbGo9z--L7wliH7iBcgSEQPGgDJMiwy'">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse justify-content-end" id="nav">
+
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+
+                            <a class="nav-link text-dark px-3" href="#OUR-STORY">OUR STORY</a>
+
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link text-dark px-3" href="#OUR-PROJECTS">OUR PROJECTS INFO</a>
+
+                        </li>
+                        <li class="nav-item">
+
+                            <a class="nav-link text-dark px-3" href="#BYE-ONLINE">BYE ONLINE</a>
+
+                        </li>
+                        <li class="nav-item">
+
+                            <a class="nav-link text-dark px-3" href="#CAREERS">CAREERS</a>
+
+                        </li>
+                        <li class="nav-item">
+
+                            <a class="nav-link text-dark px-3" href="#contact">CONTACT</a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                    <div class="player-contain">
+  
+                            <div id="player"></div>
+                          </div>
+                          
+                <!-- <div class="video-style">
+                    <video autoplay loop muted playsinline width="100%;">
+                        <source src="https://content.jwplatform.com/videos/1o30x6gd-ufBFQqhN.mp4" type="video/mp4">
+                    </video>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-1">
+                    <img src="https://cdn.pixabay.com/photo/2016/08/30/03/06/play-1629711_960_720.png" alt=""
+                        class="launch-modal" data-toggle="modal" data-target="#myModal">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="OUR-STORY" class="container scrollable">
+            <div class="row">
+                <div class="col-12 col-sm-12 scrollable">
+                    <h1 class="headline">
+                        <b>Metro Jazz - Pune</b>
+                        <br>
+                        <b>Balaji Realty</b>
+                    </h1>
+                </div>
+                <div class="col-12 col-sm-11 col-lg-5 col-xl-4 mt-3 headlineSubtext scrollable">
+                    <p>
+                        <b class="subtext">Metro Jazz in Baner, Pune by Shree Balaji Group Elite Landmarks and Surya
+                            Space is a residential project.</b>
+                    </p>
+                    <br>
+                    <p class="subcopy"> At Metro Jazz, you live in a space where the energy lets you enjoy a ... An
+                        array of 260 homes built over 5 towers, Metro Jazz is not just a project. It is a way of life.
+                        Metroness meets Jazziness. A lifestyle that showcases the grandeur of urban living, a lifestyle
+                        that is jazzy in letter and spirit.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid scrollable chairman-info mt-5"
+            style="background: url(&quot;https://www.tapestry.com/wp-content/themes/corp/assets/images/quote-pattern-05.png&quot;) left top no-repeat;background-color: #FFDD00; height: 720px;min-width: 480px;;">
+            <div class="row row-flex justify-content-center h-100">
+                <div class="col-12 col-sm-10 col-md-9 col-xl-5 text-center my-auto">
+                    <h2 class="quote">
+                        <b>
+                            <i class="subcopy_big"> "A lifestyle that showcases the grandeur of urban living, a
+                                lifestyle that is jazzy in letter and spirit Metro Jazz brings together the aura and
+                                energy of a metropolitan space and combines with a unique jazzy lifestyle that
+                                symbolizes the attitude of a growing city. This amazing combination fits your status and
+                                befits your lifestyle. It marks you as the trend setter in the way a city lives its life
+                                today and the way it will live in times to come."</i>
+                        </b>
+                    </h2>
+                    <h6 class="mt-4">
+                        <b class="subcopy1">Metro Jazz, Balaji Realty</b>
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="OUR-PROJECTS" class="container scrollable left-spacing" style="margin-top: 40px;min-width: 480px;">
+            <div class="row">
+                <div class="col-12 col-sm-11 col-lg-5 col-xl-4 mt-3 headlineSubtextone">
+
+                    <b style="font-weight: bold;letter-spacing: -2px;" class="head_subtext">LOCATION INFO</b>
+                    <hr
+                        style="border-bottom: 4px solid #ffdd00;margin-top: 5px;width: 22%;margin-bottom: 10px;margin-left: 0px;">
+                    <p style="line-height: 1.5;" class="subcopy">LOCATION HIGHLIGHTS<br>Mahalunge is among the potential
+                        locality of Pune offering a range of affordable properties. With a number of developing
+                        localities, Pune is topping the chart of the home buyer preferences. Prices here are going up
+                        and thus the fringes of the city have emerged as potential
+                        hotspots.<br><br>Connectivity:&nbsp;<br>NH-48 (10 min) | Sus Road (15 min) | Hinjewadi Road (20
+                        min)<br><br>Within 5 km:&nbsp;<br>Malls: Suyash Mall | Atria Mall<br>Schools: Pawar Public
+                        School | Akshara International School | Indira National School | Challenger Nursery
+                        School&nbsp;<br>Hospitals: Lifepoint Multispeciality Hospital | Aditya Birla Memorial Hospital |
+                        Lokmanya Hospital&nbsp;<br>Institutes: Mitcon Institute of Management</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <img src="https://newprojects.99acres.com/projects/balaji_realty/metro_jazz/images/q5g2hu1n.jpg"
+                    class="img-size img_opacity">
+            </div>
+        </div>
+        <div class="container" style="margin-top: 40px;">
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-5 col-lg-3 scrollable" style="margin-bottom: 20px;">
+                    <span class="logo">
+                        <img class="attachment-full logo imgOpacity" alt="Coach Logo"
+                            sizes="(max-width: 233px) 100vw, 233px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTjiFFag2qnVRk0ruG9zYbGo9z--L7wliH7iBcgSEQPGgDJMiwy">
+                    </span>
+                </div>
+                <div class="col-xs-12 col-sm-5 col-md-6 col-lg-5 scrollable"
+                    data-0-bottom-center="opacity:0;margin-top:60px;" data-0-bottom-bottom="opacity:1;margin-top:0px;"
+                    style="opacity: 1; margin-top: 0px;">
+                    <p class="subheadline subtext"><b>Project Layouts</b></p>
+                    <div class="text">
+                        <div id="BodyContent_dvtblnew" class="panel panel-default Pro-Detail-Grid"
+                            style="display:block">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+
+                                    <table id="BodyContent_tblNew"
+                                        class="table table-striped table-bordered table-hover" border="1"
+                                        style="width:100%;">
+                                        <tbody>
+                                            <tr style="width:100%">
+                                                <th colspan="4"
+                                                    style="background-color: #333; color: #fff; padding: 5px;width:100%">
+                                                    CONFIGURATION &amp; PRICING</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="padding: 5px;width:33.3%;text-align:left;font-weight: bold">
+                                                    BHK</th>
+                                                <th style="padding: 5px;width:33.3%;text-align:left;font-weight: bold">
+                                                    Area</th>
+                                                <th style="padding: 5px;width:33.3%;text-align:left;font-weight: bold">
+                                                    Cost</th>
+                                            </tr>
+                                            <tr style="height:30px">
+                                                <td style="width:25%;text-align:left">2 BHK</td>
+                                                <td style="width:25%;text-align:left">1212 Sq.Ft.</td>
+                                                <td style="width:25%;text-align:left">79.39 Lakhs</td>
+                                            </tr>
+                                            <tr style="height:30px">
+                                                <td style="width:25%;text-align:left">3 BHK</td>
+                                                <td style="width:25%;text-align:left">1723 Sq.Ft.</td>
+                                                <td style="width:25%;text-align:left">1.13 Crores</td>
+                                            </tr>
+                                            <tr style="height:30px">
+                                                <td style="width:25%;text-align:left">3 BHK</td>
+                                                <td style="width:25%;text-align:left">1775 Sq.Ft.</td>
+                                                <td style="width:25%;text-align:left">1.16 Crores</td>
+                                            </tr>
+                                            <tr style="height:30px">
+                                                <td style="width:25%;text-align:left">4 BHK</td>
+                                                <td style="width:25%;text-align:left">2562 Sq.Ft.</td>
+                                                <td style="width:25%;text-align:left">1.86 Crores</td>
+                                            </tr>
+                                            <tr style="height:30px">
+                                                <td style="width:25%;text-align:left">4 BHK</td>
+                                                <td style="width:25%;text-align:left">2550 Sq.Ft.</td>
+                                                <td style="width:25%;text-align:left">1.85 Crores</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <p class="subcta">
+                        <a href="/our-brands/coach/" class="a learn-more">Learn More</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container scrollable"
+            style="margin-right: 0px;margin-top: 40px;margin-bottom: 40px;min-width: 614px;">
+            <div class="row">
+                <img src="https://newprojects.99acres.com/projects/balaji_realty/metro_jazz/images/xckq0akt.jpg"
+                    class="img-right img_opacity">
+            </div>
+        </div>
+
+        <div class="container scrollable" style="margin-top: 40px;min-width: 480px;">
+            <div class="row">
+                <div class="col-12 col-sm-11 col-lg-5 col-xl-4 mt-3 left_align">
+
+                    <b style="font-weight: bold;letter-spacing: 3px;" class="head_subtext">Kate spade</b>
+                    <p style="margin-top: 5px;margin-left: 40px;letter-spacing: 1px;" class="subcopy1">NEW YORK</p>
+
+                </div>
+                <div class="col-12 col-sm-11 col-lg-5 col-xl-5 mt-3 left_space">
+
+                    <b class="subcopy1">INSPIRING WOMEN TO LIVE MORE INTERESTING LIVES</b>
+                    <p style="line-height: 1.5;" class="subcopy">Since its launch in 1993 with a collection of six
+                        essential handbags, Kate Spade New York has always
+                        stood for optimistic femininity. Today, the brand is a global life and style house with
+                        handbags,
+                        ready-to-wear, jewelry, footwear, gifts, home décor and more. Polished ease, thoughtful details
+                        and
+                        a modern, sophisticated use of color—Kate Spade New York’s founding principles define a unique
+                        style
+                        synonymous with joy. Under the vision of creative director Nicola Glass, the brand continues to
+                        celebrate
+                        confident women with a youthful spirit.</p>
+                    <a href="https://www.tapestry.com/kate-spade/" style="text-decoration: none;letter-spacing: 1px;"
+                        class="subcta">LEARN MORE
+                        <span style="margin-left: 10px;font-size: 20px;font-weight: bolder;">&#8250;</span>
+                    </a>
+                    <hr
+                        style="border-bottom: 3px solid black;width: 30%;margin-bottom: 10px;margin-left: 0px;margin-top: 0px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="container " style="margin: 40px auto;">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100"
+                            src="https://newprojects.99acres.com/projects/balaji_realty/metro_jazz/images/o4grhmcj.png"
+                            alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100"
+                            src="https://img.staticmb.com/mbimages/project/Floor-Plan-25-Metro-Jazz-Pune-5070949_725_1024.jpg"
+                            alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100"
+                            src="https://newprojects.99acres.com/projects/balaji_realty/metro_jazz/maps/1212.jpg"
+                            alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100"
+                            src="https://newprojects.99acres.com/projects/balaji_realty/metro_jazz/maps/1318.jpg"
+                            alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+
+
+        <div class="container scrollable" style="margin-top: 60px;min-width: 614px;">
+            <div class="row row-flex justify-content-center">
+                <div class="col-4 visible-desk">
+                    <img src="https://www.tapestry.com/wp-content/uploads/2017/10/Leadership_Landing_Small_NEW_2x.jpg"
+                        alt="" style="width: 100%; height: auto;" class="img_opacity">
+                </div>
+                <div class="col-12 col-md-4" style="margin-top: 12%;">
+                    <b style="font-weight: bold;letter-spacing: -2px;" class="head_subtext">LEADERSHIP</b>
+                    <hr
+                        style="border-bottom: 4px solid #ffdd00;margin-top: 5px;width: 22%;margin-bottom: 10px;margin-left: 0px;">
+                    <p style="line-height: 1.5;" class="subcopy">
+                        Our leadership creates and communicates a strategic vision and provides the resources and
+                        support necessary for our brands
+                        to grow, talent to develop, and business to transform.</p>
+                    <a href="https://www.tapestry.com/kate-spade/" style="text-decoration: none;letter-spacing: 1px;"
+                        class="subcta">LEARN MORE
+                        <span style="margin-left: 10px;font-size: 20px;font-weight: bolder;">&#8250;</span>
+                    </a>
+                    <hr
+                        style="border-bottom: 3px solid black;width: 40%;margin-bottom: 10px;margin-left: 0px;margin-top: 0px;">
+                </div>
+                <div class="col-4">
+                    <img src="https://www.tapestry.com/wp-content/uploads/2017/10/Leadership_Landing_Small_NEW_2x.jpg"
+                        alt="" style="width: 100%; height: auto;" class="img_opacity">
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid scrollable" style="margin-top: 40px;min-width: 480px;background-color: #ffdd00;">
+            <div class="row">
+                <div class="col-12 col-sm-11 col-lg-5 col-xl-3 mt-3"
+                    style="margin-left: 20%;padding-top: 7%;padding-bottom: 10%;">
+
+                    <b style="font-size: 170px;font-weight: normal;">7.43</b>
+                    <p style="margin-top: 45px;" class="subcopy1">Market Capitalization in Billions of U.S. Dollars</p>
+
+                </div>
+                <div class="col-12 col-sm-11 col-lg-5 col-xl-4 mt-3"
+                    style="padding-top: 10%;padding-bottom: 10%;margin-left: 5%;">
+
+                    <b class="subtext">INVESTORS</b>
+                    <p style="line-height: 1.5;margin-top: 10px;" class="subcopy">Tapestry is the first New York–based
+                        house of modern luxury lifestyle brands. Our company’s portfolio
+                        includes the Coach, kate spade new york, and Stuart Weitzman brands. Tapestry’s common stock
+                        trades
+                        on the New York Stock Exchange under the symbol TPR.</p>
+                    <a href="https://www.tapestry.com/kate-spade/" style="text-decoration: none;" class="subcta">LEARN
+                        MORE
+                        <span style="margin-left: 10px;font-size: 20px;font-weight: bolder;">&#8250;</span>
+                    </a>
+                    <hr
+                        style="border-bottom: 3px solid black;width: 30%;margin-bottom: 10px;margin-left: 0px;margin-top: 0px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="container scrollable" style="margin-top: 60px;min-width: 614px;">
+            <div class="row row-flex justify-content-center">
+                <div class="col-4 visible-desk">
+                    <img src="https://www.tapestry.com/wp-content/uploads/2017/10/Leadership_Landing_Small_NEW_2x.jpg"
+                        alt="" style="width: 100%; height: auto;" class="img_opacity">
+                </div>
+                <div class="col-12 col-md-4" style="margin-top: 10%;">
+                    <b style="font-weight: bold;letter-spacing: -2px;" class="head_subtext">CAREERS</b>
+                    <hr
+                        style="border-bottom: 4px solid #ffdd00;margin-top: 5px;width: 22%;margin-bottom: 10px;margin-left: 0px;">
+                    <p style="line-height: 1.5;" class="subcopy">
+                        We believe that with hard work and determination, anything is possible. Our culture is rooted in
+                        the belief that we create
+                        our own destiny, and we strive to create opportunities for success and growth in everything we
+                        do.</p>
+                    <a href="https://www.tapestry.com/kate-spade/" style="text-decoration: none;letter-spacing: 1px;"
+                        class="subcta">LEARN MORE
+                        <span style="margin-left: 10px;font-size: 20px;font-weight: bolder;">&#8250;</span>
+                    </a>
+                    <hr
+                        style="border-bottom: 3px solid black;width: 40%;margin-bottom: 10px;margin-left: 0px;margin-top: 0px;">
+                </div>
+                <div class="col-4">
+                    <img src="https://www.tapestry.com/wp-content/uploads/2017/08/Careers_Landing_New_2x.jpg" alt=""
+                        style="width: 100%; height: auto;" class="img_opacity">
+                </div>
+            </div>
+        </div>
+
+        <div class="container scrollable" style="margin-top: 70px;min-width: 480px;background-color: #ffdd00;">
+            <div class="row">
+                <div class="col-12 col-sm-11 col-lg-5 col-xl-4 mt-3 left_align"
+                    style="padding-top: 2%;padding-bottom: 2%;">
+                    <b style="font-size: 35px;line-height: 1.1;font-weight: bolder;" class="head_subtext">INTERESTED IN
+                        GETTING IN TOUCH? WE'D LOVE TO HEAR FROM YOU.</b>
+                </div>
+                <div class="col-12 col-sm-11 col-lg-5 col-xl-3 mt-3 left_align_subcta"
+                    style="padding-top: 11%;padding-bottom: 2%;margin-left: 5%;">
+                    <a href="https://www.tapestry.com/kate-spade/" style="text-decoration: none;" class="subcta">CONTACT
+                        US
+                        <span style="margin-left: 60px;font-size: 20px;font-weight: bolder;">&#8250;</span>
+                    </a>
+                    <hr
+                        style="border-bottom: 3px solid black;width: 68%;margin-bottom: 10px;margin-left: 0px;margin-top: 0px;">
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--Video Model-->
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: transparent;border: 0px;">
+                <div class="modal-header" style="border: none;">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body" style="padding-top: 0px;">
+                        <iframe width="100%" height: 50%; controls
+                        src="https://www.youtube.com/embed/7_Q8yBOO4xQ">
+                        </iframe>
+                    <!-- <video width="100%" controls>
+                        <source src="https://www.youtube.com/embed/7_Q8yBOO4xQ" type="Video/mp4">
+                    </video> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            var e = $(window).height();
+            $(window).scroll(function () {
+                var n = $(window).scrollTop(),
+                    o = e + n;
+                $('.scrollable').each(function (e, n) {
+                    var i = $(n).offset().top - 80;
+                    o >= i ? $(n).addClass('slide_effect') : o <= i && $(n).removeClass('slide_effect')
+                })
+            })
+        })
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.launch-modal').click(function () {
+                $('.firstBlur').addClass('modalBlur');
+                $('#myModal').modal({
+                    backdrop: 'static'
+                });
+            });
+            $('.close').click(function () {
+                $('.firstBlur').removeClass('modalBlur');
+            });
+        });
+
+        (function ($) {
+            $.fn.visible = function (partial) {
+                var $t = $(this),
+                    $w = $(window),
+                    viewTop = $w.scrollTop(),
+                    viewBottom = viewTop + $w.height(),
+                    top = $t.offset().top,
+                    bottom = top + $t.height(),
+                    compareTop = partial === true ? bottom : top,
+                    compareBottom = partial === true ? top : bottom;
+
+                return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+            };
+        })(jQuery);
+
+        $(window).scroll(function (event) {
+            $(".img_opacity").each(function (i, el) {
+                var el = $(el);
+                if (el.visible(false)) {
+                    el.css("opacity", "1");
+                } else {
+                    el.css("opacity", "0.8");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
