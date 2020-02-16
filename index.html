@@ -544,6 +544,20 @@ if (state.data === YT.PlayerState.ENDED) {
             border: 1px solid #000;
             overflow: hidden;
         }
+
+        img.img-size.img_opacity:hover {
+            transform: scale(1.2);
+            transition: transform .2s;
+            cursor: pointer;
+        }
+
+        img.img-size.img_opacity {
+            transition: transform .2s;
+        }
+
+        .overflow {
+            overflow: hidden;
+        }
     </style>
 </head>
 
@@ -689,7 +703,7 @@ if (state.data === YT.PlayerState.ENDED) {
                             Hospital |
                             Lokmanya Hospital&nbsp;<br>Institutes: Mitcon Institute of Management</p>
                     </div>
-                    <div class="col-11 col-lg-6 mt-3">
+                    <div class="col-11 col-lg-6 mt-3 overflow">
                         <img src="https://newprojects.99acres.com/projects/balaji_realty/metro_jazz/images/q5g2hu1n.jpg"
                             class="img-size img_opacity">
                     </div>
@@ -782,12 +796,14 @@ if (state.data === YT.PlayerState.ENDED) {
 
             <div class="container">
                 <div class="row">
-
                     <div class="col-11 col-sm-6 col-lg-4">
                         <div class="p-3 m-3 project-sec">
-                            <img src="https://loremflickr.com/275/480" class="mb-3 img-size img_opacity"
-                                alt="img-project">
-                            <p class="subcopy">Prices start from 44lkh</p>
+                            <div class="overflow">
+                                <img src="https://loremflickr.com/275/480" class="img-size img_opacity"
+                                    alt="img-project">
+                            </div>
+                            <p class="subcopy m-2">Metro Jazz, Mahalunge</p>
+                            <p class="subcopy m-2">Prices start from 44lkh</p>
                             <p class="subcta" align="center">
                                 <button type="button" href="#" class="a learn-more">Learn More</button>
                             </p>
@@ -795,19 +811,25 @@ if (state.data === YT.PlayerState.ENDED) {
                     </div>
                     <div class="col-11 col-sm-6 col-lg-4">
                         <div class="p-3 m-3 project-sec">
-                            <img src="https://loremflickr.com/275/480" class="mb-3 img-size img_opacity"
-                                alt="img-project">
-                            <p class="subcopy">Prices start from 48lkh</p>
+                            <div class="overflow">
+                                <img src="https://loremflickr.com/275/480" class="img-size img_opacity"
+                                    alt="img-project">
+                            </div>
+                            <p class="subcopy m-2">Metro Jazz, Baner</p>
+                            <p class="subcopy m-2">Prices start from 48lkh</p>
                             <p class="subcta" align="center">
                                 <button type="button" href="#" class="a learn-more">Learn More</button>
                             </p>
                         </div>
                     </div>
                     <div class="col-11 col-sm-6 col-lg-4">
-                        <div class="p-3 m-3 project-sec">
-                            <img src="https://loremflickr.com/275/480" class="mb-3 img-size img_opacity"
-                                alt="img-project">
-                            <p class="subcopy">Prices start from 52lkh</p>
+                        <div class="p-3 m-3 project-sec overflow">
+                            <div class="overflow">
+                                <img src="https://loremflickr.com/275/480" class="img-size img_opacity"
+                                    alt="img-project">
+                            </div>
+                            <p class="subcopy m-2">Metro Jazz, Mahalunge</p>
+                            <p class="subcopy m-2">Prices start from 52lkh</p>
                             <p class="subcta" align="center">
                                 <button type="button" href="#" class="a learn-more">Learn More</button>
                             </p>
@@ -815,6 +837,51 @@ if (state.data === YT.PlayerState.ENDED) {
                     </div>
                 </div>
             </div>
+
+            <div class="container">
+                    <div class="row">
+                        <div class="col-11 col-sm-6 col-lg-4">
+                            <div class="p-3 m-3 project-sec">
+                                <div class="overflow">
+                                    <img src="https://loremflickr.com/275/480" class="img-size img_opacity"
+                                        alt="img-project">
+                                </div>
+                                <p class="subcopy m-2">Metro Jazz, Baner</p>
+                                <p class="subcopy m-2">Prices start from 44lkh</p>
+                                <p class="subcta" align="center">
+                                    <button type="button" href="#" class="a learn-more">Learn More</button>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-11 col-sm-6 col-lg-4">
+                            <div class="p-3 m-3 project-sec">
+                                <div class="overflow">
+                                    <img src="https://loremflickr.com/275/480" class="img-size img_opacity"
+                                        alt="img-project">
+                                </div>
+                                <p class="subcopy m-2">Metro Jazz, Sus Gaon</p>
+                                <p class="subcopy m-2">Prices start from 48lkh</p>
+                                <p class="subcta" align="center">
+                                    <button type="button" href="#" class="a learn-more">Learn More</button>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-11 col-sm-6 col-lg-4">
+                            <div class="p-3 m-3 project-sec overflow">
+                                <div class="overflow">
+                                    <img src="https://loremflickr.com/275/480" class="img-size img_opacity"
+                                        alt="img-project">
+                                </div>
+                                <p class="subcopy m-2">Metro Jazz, Mahalunge</p>
+                                <p class="subcopy m-2">Prices start from 52lkh</p>
+                                <p class="subcta" align="center">
+                                    <button type="button" href="#" class="a learn-more">Learn More</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             <div class="row">
                 <h3><b style="font-weight: bold;letter-spacing: -2px;" class="head_subtext">Some more upcoming
                         projects</b></h3>
@@ -852,9 +919,9 @@ if (state.data === YT.PlayerState.ENDED) {
 
         <div id="CAREERS" class="container scrollable" style="margin-top: 60px;min-width: 614px;">
             <div class="row row-flex justify-content-center">
-                <div class="col-11 col-lg-4 visible-desk">
+                <div class="col-11 col-lg-4 visible-desk overflow">
                     <img src="https://www.tapestry.com/wp-content/uploads/2017/10/Leadership_Landing_Small_NEW_2x.jpg"
-                        alt="" style="width: 100%; height: auto;" class="img_opacity">
+                        alt="" class="img-size img_opacity">
                 </div>
                 <div class="col-12 col-md-4" style="margin-top: 10%;">
                     <b style="font-weight: bold;letter-spacing: -2px;" class="head_subtext">CAREERS</b>
@@ -871,9 +938,9 @@ if (state.data === YT.PlayerState.ENDED) {
                     <hr
                         style="border-bottom: 3px solid black;width: 40%;margin-bottom: 10px;margin-left: 0px;margin-top: 0px;">
                 </div>
-                <div class="col-11 col-lg-4">
+                <div class="col-11 col-lg-4 overflow">
                     <img src="https://www.tapestry.com/wp-content/uploads/2017/08/Careers_Landing_New_2x.jpg" alt=""
-                        style="width: 100%; height: auto;" class="img_opacity">
+                        class="img-size img_opacity">
                 </div>
             </div>
         </div>
@@ -913,9 +980,6 @@ if (state.data === YT.PlayerState.ENDED) {
                 <div class="modal-body" style="padding-top: 0px;">
                     <iframe width="100%" height: 50%; controls src="https://youtu.be/nh1aIMdDBp0">
                     </iframe>
-                    <!-- <video width="100%" controls>
-                        <source src="https://youtu.be/nh1aIMdDBp0" type="Video/mp4">
-                    </video> -->
                 </div>
             </div>
         </div>
