@@ -6,577 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>metro-jazz </title>
-    <link rel="shortcut icon"
-        href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTjiFFag2qnVRk0ruG9zYbGo9z--L7wliH7iBcgSEQPGgDJMiwy">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTjiFFag2qnVRk0ruG9zYbGo9z--L7wliH7iBcgSEQPGgDJMiwy">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--Slick CSS-->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script async src="https://www.youtube.com/iframe_api"></script>
-    <script>
-        var player;
-        var videoId = 'nh1aIMdDBp0';
-        var startSeconds = 4;  // set your own video start time when loop play
-        var endSeconds = 26;   // set your own video end time when loop play
-        var playerConfig = {
-            height: '70vh',
-            width: '100%',
-            videoId: videoId,
-            playerVars: {
-
-                autoplay: 1,            // Auto-play the video on load
-                controls: 0,            // Show pause/play buttons in player
-                showinfo: 0,            // Hide the video title
-                modestbranding: 1,      // Hide the Youtube Logo
-                fs: 1,                  // Hide the full screen button
-                cc_load_policy: 0,      // Hide closed captions
-                iv_load_policy: 3,      // Hide the Video Annotations
-                start: startSeconds,
-                end: endSeconds,
-                autohide: 0, // Hide video controls when playing
-            },
-            events: {
-                'onStateChange': onStateChange,       // reference to Iframe API
-                onReady: function (e) {              // mute the video when loaded
-                    e.target.mute();
-                }
-            }
-        };
-        //excute the video in div
-        function onYouTubePlayerAPIReady() {
-
-            player = new YT.Player('myvideo', playerConfig);
-
-        }
-        //repload the video when onStateChange=YT.PlayerState.ENDED)
-        function onStateChange(state) {
-            if (state.data === YT.PlayerState.ENDED) {
-                player.loadVideoById({
-                    videoId: videoId,
-                    startSeconds: startSeconds,
-                    endSeconds: endSeconds
-
-                });
-            }
-        }
-
-    </script>
-
-    <!-- <script>
-            // 2. This code loads the IFrame Player API code asynchronously.
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/player_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-
-var player;
-var startSeconds = 1;  
-var endSeconds = 26;
-function onYouTubePlayerAPIReady() {
-  player = new YT.Player('player', {
-    playerVars: {
-        'autoplay': 1, 
-        'controls': 1, 
-        'showinfo': 0, 
-      'controls': 0,
-      'modestbranding': 1,
-      'autohide': 1,
-      'loop': 1,
-      'wmode':'opaque',
-      'fs': 1,
-      'rel': 0,
-      'start': startSeconds,
-    'end': endSeconds, },
-    videoId: 'nh1aIMdDBp0',
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onStateChange,       // reference to Iframe API
-        onReady: function(e) {              // mute the video when loaded
-        e.target.mute();  
-        }
-  }
-});
-}
-function onPlayerReady(event) {
- event.target.mute();
-} 
-function onYouTubePlayerAPIReady() {
-player = new YT.Player('myvideo', playerConfig);
-}
-function onStateChange(state) {
-if (state.data === YT.PlayerState.ENDED) {
-  player.loadVideoById({
-    videoId: videoId,
-    startSeconds: startSeconds,
-    endSeconds: endSeconds
-
-  });
-}
-}
-</script> -->
-    <style>
-        body {
-            width: 100%;
-            height: 100%;
-            width: fit-content;
-        }
-
-        body h1,
-        body h2,
-        body h3,
-        body h4,
-        body h5,
-        body h6 {
-            font-family: benton-modern-display, serif;
-        }
-
-        body p,
-        body span,
-        body a {
-            font-family: din-2014, sans-serif;
-            color: black;
-        }
-
-        .navbar-temp .navbar-container {
-            display: grid;
-            background-color: antiquewhite;
-        }
-
-        .navbar-temp .navbar-container .row.row-flex {
-            display: grid;
-            grid-template-columns: 20% 80%;
-        }
-
-        .navbar-temp .navbar-container .logo {
-            width: 90%;
-            margin: 0px 0px 0px 40px;
-        }
-
-        .navbar-temp .navbar-container .menu-main-menu-container-temp {
-            float: right !important;
-            padding-top: 65px;
-        }
-
-        .navbar-temp .navbar-container .menu-main-menu-container-temp li {
-            display: inline-block;
-            margin-right: 30px;
-            position: static;
-            float: left;
-            padding: -1px 0px 0 0px;
-        }
-
-        .navbar-temp .navbar-container .menu-main-menu-container-temp li a {
-            text-decoration: none;
-            padding: 0;
-            text-transform: uppercase;
-            font-size: 16px;
-            font-weight: normal;
-        }
-
-
-        .scrollable {
-            transform: translateY(80px);
-            transition: transform 1000ms cubic-bezier(0, -0.005, 0.08, 1) 0s;
-        }
-
-        .scrollable {
-            width: 100% !important;
-            overflow: hidden;
-        }
-
-        .scrollable.slide_effect {
-            transform: translateY(0);
-        }
-
-        .row.row-flex {
-            display: flex;
-        }
-
-        .container .headline {
-            font-size: 100px;
-            font-style: italic;
-            line-height: 1.1;
-        }
-
-        .container h2.quote {
-            font-size: 34px;
-            line-height: 40px;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-
-        .container.chairman-info {
-            background-color: antiquewhite;
-        }
-
-        /* first section modal and video inline start */
-
-        .launch-modal {
-            position: relative;
-            top: -40px;
-            cursor: pointer;
-        }
-
-
-
-        .modal {
-            top: 50px;
-        }
-
-        @media (max-width: 576px) {
-            .modal-content {
-                width: 100%;
-                left: 0px;
-            }
-
-            .launch-modal {
-                width: 10%;
-                left: 80px;
-            }
-        }
-
-        @media (min-width: 576px) {
-            .launch-modal {
-                width: 377%;
-                left: 100px;
-            }
-
-        }
-
-        @media (min-width: 768px) {
-            .modal-content {
-                width: 140%;
-                left: -95px;
-            }
-
-            .launch-modal {
-                width: 200%;
-                left: 140px;
-            }
-
-        }
-
-        @media (min-width: 992px) {
-            .launch-modal {
-                width: 125%;
-                left: 150px;
-            }
-
-        }
-
-        @media (min-width: 1200px) {
-            .modal-content {
-                width: 194%;
-                margin-left: -130px;
-            }
-
-            .launch-modal {
-                width: 100%;
-                left: 190px;
-            }
-
-        }
-
-        .video-style {
-            margin-bottom: 10px;
-            margin-top: 0px;
-            padding: 0px;
-        }
-
-        .firstBlur.modalBlur>*:not(.modal) {
-            filter: blur(60px);
-        }
-
-        /* first section modal and video inline end */
-
-        /* Uttam */
-
-        @media (min-width: 320px) {
-            .container .headline {
-                font-size: 40px;
-                font-style: italic;
-                line-height: 1.1;
-            }
-
-            .subtext {
-                font-size: 38px;
-            }
-
-            .head_subtext {
-                font-size: 51px;
-            }
-
-            .subcopy {
-                font-size: 38px;
-            }
-
-            .subcopy {
-                font-size: 38px;
-            }
-
-            .container-fluid .subcopy_big {
-                font-size: 38px;
-            }
-
-            .subcopy1 {
-                font-size: 33px;
-            }
-
-            .subcta {
-                font-size: 41px;
-            }
-
-            .left_align {
-                margin-left: 0px;
-            }
-
-            .text-dark {
-                font-size: 2rem;
-                line-height: 2.0;
-            }
-
-            .container .headline {
-                font-size: 75px;
-
-            }
-
-
-        }
-
-
-
-        @media (min-width: 996px) {
-            .container .headline {
-                font-size: 85px;
-                font-style: italic;
-                line-height: 1.1;
-            }
-        }
-
-        .img-size {
-            width: 100%;
-            height: auto;
-        }
-
-
-        @media (min-width: 576px) {
-            body {
-                min-width: 480px;
-            }
-
-            .navbar-temp .navbar-container .menu-main-menu-container-temp {
-                padding-top: 10px;
-            }
-
-            .left_space {
-                margin-left: 0%;
-            }
-
-            .container .headline {
-                font-size: 65px;
-
-            }
-
-            .container .subtext {
-                font-size: 33px;
-            }
-
-            .container .head_subtext {
-                font-size: 33px;
-            }
-
-            .container .subcopy {
-                font-size: 30px;
-            }
-
-            .container-fluid .subcopy_big {
-                font-size: 30px;
-            }
-
-        }
-
-        @media (min-width: 767px) {
-            .container .headline {
-                font-size: 60px;
-                font-style: italic;
-                line-height: 1.1;
-            }
-
-            .container .subtext {
-                font-size: 24px;
-            }
-
-            .head_subtext {
-                font-size: 24px;
-            }
-
-            .container .subcopy {
-                font-size: 20px;
-            }
-
-            .container .subcopy1 {
-                font-size: 19px;
-            }
-
-            .container .subcta {
-                font-size: 20px;
-            }
-
-            .container-fluid .subcopy_big {
-                font-size: 32px;
-            }
-
-            .container-fluid .subcopy1 {
-                font-size: 21px;
-            }
-
-            .text-dark {
-                font-size: 1rem;
-                line-height: 1.5;
-            }
-
-            .left_align {
-                margin-left: 28%;
-            }
-
-            .left_align_subcta {
-                margin-left: 2%;
-            }
-
-        }
-
-        @media (min-width: 1200px) {
-            .container .subtext {
-                font-size: 15px;
-            }
-
-            .container .head_subtext {
-                font-size: 40px;
-            }
-
-            .container .subcopy {
-                font-size: 15px;
-            }
-
-            .container-fluid .subcopy1 {
-                font-size: 15px;
-            }
-
-            .container-fluid .subcopy_big {
-                font-size: 30px;
-            }
-
-            .container .subcopy1 {
-                font-size: 20px;
-            }
-
-            .subcta {
-                font-size: 18px;
-                letter-spacing: 1px;
-            }
-
-            .container .left_align {
-                margin-left: 24%;
-            }
-
-            .container-fluid .subcopy {
-                font-size: 17px;
-            }
-
-            .container-fluid .subtext {
-                font-size: 20px;
-            }
-
-        }
-
-        .img-left {
-            width: 100%;
-            height: auto;
-            margin-right: 700px;
-        }
-
-        .img-right {
-            width: 100%;
-            height: auto;
-            margin-left: 0px;
-        }
-
-        li:hover {
-            border-bottom: 1px solid white;
-            color: black;
-        }
-
-        iframe#myvideo {
-
-            height: 70vh;
-        }
-
-        .subcta button.a.learn-more {
-            background: #3598d3;
-            color: #fff;
-            text-transform: uppercase;
-            /* border: 1px solid #000; */
-            padding: 10px 25px;
-            margin: 0 auto;
-            border: none;
-        }
-
-        .subcta button.a.learn-more:hover {
-            background: #2d6aab;
-            color: #fff;
-        }
-
-        .bk-color-lavender {
-            background-color: lavender;
-        }
-
-        img.logo {
-            width: 100px;
-        }
-
-        .project-sec {
-            border: 1px solid #000;
-            overflow: hidden;
-        }
-
-        img.img-size.img_opacity:hover {
-            transform: scale(1.2);
-            transition: transform .2s;
-            cursor: pointer;
-        }
-
-        img.img-size.img_opacity {
-            transition: transform .2s;
-        }
-
-        .overflow {
-            overflow: hidden;
-        }
-    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
 </head>
 
 <body class="firstBlur">
     <div>
         <div>
-            <nav class="navbar navbar-expand-md navbar-light sticky-top" id="nav-id"
-                style="background-color: antiquewhite;padding-bottom: 0px;">
+            <nav class="navbar navbar-expand-md navbar-light sticky-top" id="nav-id" style="background-color: antiquewhite;padding-bottom: 0px;">
 
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav"
-                    style="border-color: transparent;font-size: 50px;">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav" style="border-color: transparent;font-size: 50px;">
                     <span class="navbar-toggler-icon">
 
                     </span>
                 </button>
                 <div class="">
                     <a class="nav-link px-1" href="https://www.metro-jazz.com/" rel="home">
-                        <img class="logo"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTjiFFag2qnVRk0ruG9zYbGo9z--L7wliH7iBcgSEQPGgDJMiwy">
+                        <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTjiFFag2qnVRk0ruG9zYbGo9z--L7wliH7iBcgSEQPGgDJMiwy">
                     </a>
                 </div>
 
@@ -618,7 +79,30 @@ if (state.data === YT.PlayerState.ENDED) {
             </nav>
         </div>
 
-        <div class="container-fluid">
+        <div id="OUR-STORY" class="container mt-5">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg-6">
+                    <h1 class="headline">
+                        <b>Metro <span style="
+                            color: #ef1c24;
+                        ">Jazz</span> - Pune</b>
+                        <br>
+                        <b>Balaji Realty</b>
+                    </h1>
+                </div>
+                <div class="col-12 col-sm-11 col-lg-6 mt-3">
+                    <p>
+                        <b class="subtext">Metro Jazz in Baner, Pune by Shree Balaji Group Elite Landmarks and Surya
+                            Space is a residential project.</b>
+                    </p>
+                    <br>
+                    <p class="subcopy"> At Metro Jazz, you live in a space where the energy lets you enjoy a ... An array of 260 homes built over 5 towers, Metro Jazz is not just a project. It is a way of life. Metroness meets Jazziness. A lifestyle that showcases the grandeur
+                        of urban living, a lifestyle that is jazzy in letter and spirit.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid v-cloak">
             <div class="row">
                 <div id="myvideo"></div>
             </div>
@@ -626,44 +110,15 @@ if (state.data === YT.PlayerState.ENDED) {
 
         <div class="container">
             <div class="row">
-                <div class="col-4 col-sm-1">
-                    <img src="https://cdn.pixabay.com/photo/2016/08/30/03/06/play-1629711_960_720.png" alt=""
-                        class="launch-modal" data-toggle="modal" data-target="#myModal">
+                <div class="col-4 col-md-1">
+                    <img src="https://cdn.pixabay.com/photo/2016/08/30/03/06/play-1629711_960_720.png" alt="" class="launch-modal" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/loFtozxZG0s">
                 </div>
             </div>
         </div>
 
-
-
-        <div id="OUR-STORY" class="container scrollable">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-lg-6 scrollable">
-                    <h1 class="headline">
-                        <b>Metro Jazz - Pune</b>
-                        <br>
-                        <b style="
-                        color: darkred;
-                    ">Balaji Realty</b>
-                    </h1>
-                </div>
-                <div class="col-12 col-sm-11 col-lg-6 mt-3 scrollable">
-                    <p>
-                        <b class="subtext">Metro Jazz in Baner, Pune by Shree Balaji Group Elite Landmarks and Surya
-                            Space is a residential project.</b>
-                    </p>
-                    <br>
-                    <p class="subcopy"> At Metro Jazz, you live in a space where the energy lets you enjoy a ... An
-                        array of 260 homes built over 5 towers, Metro Jazz is not just a project. It is a way of life.
-                        Metroness meets Jazziness. A lifestyle that showcases the grandeur of urban living, a lifestyle
-                        that is jazzy in letter and spirit.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-fluid scrollable chairman-info mt-5"
-            style="background: url(&quot;https://www.metro-jazz.com/wp-content/themes/corp/assets/images/quote-pattern-05.png&quot;) left top no-repeat;background-color: antiquewhite; height: 720px;min-width: 480px;;">
+        <div class="container-fluid  chairman-info" style="background: url(&quot;https://www.metro-jazz.com/wp-content/themes/corp/assets/images/quote-pattern-05.png&quot;) left top no-repeat;background-color: antiquewhite; height: 720px;min-width: 480px;;">
             <div class="row row-flex justify-content-center h-100">
-                <div class="col-12 col-sm-10 col-md-9 col-xl-8 text-center my-auto">
+                <div class="col-12 col-sm-10 col-md-9 col-xl-8 text-center my-auto scrollable">
                     <h2 class="quote">
                         <b>
                             <i class="subcopy_big"> "A lifestyle that showcases the grandeur of urban living, a
@@ -682,35 +137,25 @@ if (state.data === YT.PlayerState.ENDED) {
         </div>
 
         <div class="bk-color-lavender">
-            <div id="OUR-PROJECTS" class="container scrollable left-spacing" style="margin-top: 40px;min-width: 480px;">
+            <div id="OUR-PROJECTS" class="container  left-spacing scrollable" style="margin-top: 40px;min-width: 480px;">
                 <div class="row">
                     <div class="col-11 col-lg-6 mt-3">
 
                         <b style="font-weight: bold;letter-spacing: -2px;" class="head_subtext">LOCATION INFO</b>
-                        <hr
-                            style="border-bottom: 4px solid antiquewhite;margin-top: 5px;width: 22%;margin-bottom: 10px;margin-left: 0px;">
-                        <p style="line-height: 1.5;" class="subcopy">LOCATION HIGHLIGHTS<br>Mahalunge is among the
-                            potential
-                            locality of Pune offering a range of affordable properties. With a number of developing
-                            localities, Pune is topping the chart of the home buyer preferences. Prices here are going
-                            up
-                            and thus the fringes of the city have emerged as potential
-                            hotspots.<br><br>Connectivity:&nbsp;<br>NH-48 (10 min) | Sus Road (15 min) | Hinjewadi Road
-                            (20
-                            min)<br><br>Within 5 km:&nbsp;<br>Malls: Suyash Mall | Atria Mall<br>Schools: Pawar Public
-                            School | Akshara International School | Indira National School | Challenger Nursery
-                            School&nbsp;<br>Hospitals: Lifepoint Multispeciality Hospital | Aditya Birla Memorial
-                            Hospital |
-                            Lokmanya Hospital&nbsp;<br>Institutes: Mitcon Institute of Management</p>
+                        <hr style="border-bottom: 4px solid antiquewhite;margin-top: 5px;width: 22%;margin-bottom: 10px;margin-left: 0px;">
+                        <p style="line-height: 1.5;" class="subcopy">LOCATION HIGHLIGHTS<br>Mahalunge is among the potential locality of Pune offering a range of affordable properties. With a number of developing localities, Pune is topping the chart of the home buyer preferences. Prices here are
+                            going up and thus the fringes of the city have emerged as potential hotspots.
+                            <br><br>Connectivity:&nbsp;<br>NH-48 (10 min) | Sus Road (15 min) | Hinjewadi Road (20 min)
+                            <br><br>Within 5 km:&nbsp;<br>Malls: Suyash Mall | Atria Mall<br>Schools: Pawar Public School | Akshara International School | Indira National School | Challenger Nursery School&nbsp;
+                            <br>Hospitals: Lifepoint Multispeciality Hospital | Aditya Birla Memorial Hospital | Lokmanya Hospital&nbsp;<br>Institutes: Mitcon Institute of Management</p>
                     </div>
-                    <div class="col-11 col-lg-6 mt-3 overflow">
-                        <img src="https://newprojects.99acres.com/projects/balaji_realty/metro_jazz/images/q5g2hu1n.jpg"
-                            class="img-size img_opacity">
+                    <div class="col-11 col-lg-6 mt-3 overflow img-rl-container">
+                        <img src="https://newprojects.99acres.com/projects/balaji_realty/metro_jazz/images/q5g2hu1n.jpg" class="img-rtl-1 img-size img_opacity">
                     </div>
                 </div>
             </div>
 
-            <div class="container" style="margin-top: 40px;">
+            <div class="container scrollable" style="margin-top: 40px;">
                 <div class="row justify-content-center">
                     <div class="col-xs-12 col-sm-3 col-md-5 col-lg-3 scrollable" style="margin-bottom: 20px;">
                         <span class="logo">
@@ -719,34 +164,25 @@ if (state.data === YT.PlayerState.ENDED) {
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTjiFFag2qnVRk0ruG9zYbGo9z--L7wliH7iBcgSEQPGgDJMiwy">
                         </span>
                     </div>
-                    <div class="col-xs-12 col-sm-5 col-md-6 col-lg-5 scrollable"
-                        data-0-bottom-center="opacity:0;margin-top:60px;"
-                        data-0-bottom-bottom="opacity:1;margin-top:0px;" style="opacity: 1; margin-top: 0px;">
+                    <div class="col-xs-12 col-sm-5 col-md-6 col-lg-5 scrollable" data-0-bottom-center="opacity:0;margin-top:60px;" data-0-bottom-bottom="opacity:1;margin-top:0px;" style="opacity: 1; margin-top: 0px;">
                         <p class="subheadline subtext"><b>Project Layouts</b></p>
                         <div class="text">
-                            <div id="BodyContent_dvtblnew" class="panel panel-default Pro-Detail-Grid"
-                                style="display:block">
+                            <div id="BodyContent_dvtblnew" class="panel panel-default Pro-Detail-Grid" style="display:block">
                                 <div class="panel-body">
                                     <div class="table-responsive">
 
-                                        <table id="BodyContent_tblNew"
-                                            class="table table-striped table-bordered table-hover" border="1"
-                                            style="width:100%;">
+                                        <table id="BodyContent_tblNew" class="table table-striped table-bordered table-hover" border="1" style="width:100%;">
                                             <tbody>
                                                 <tr style="width:100%">
-                                                    <th colspan="4"
-                                                        style="background-color: #333; color: #fff; padding: 5px;width:100%">
+                                                    <th colspan="4" style="background-color: #333; color: #fff; padding: 5px;width:100%">
                                                         CONFIGURATION &amp; PRICING</th>
                                                 </tr>
                                                 <tr>
-                                                    <th
-                                                        style="padding: 5px;width:33.3%;text-align:left;font-weight: bold">
+                                                    <th style="padding: 5px;width:33.3%;text-align:left;font-weight: bold">
                                                         BHK</th>
-                                                    <th
-                                                        style="padding: 5px;width:33.3%;text-align:left;font-weight: bold">
+                                                    <th style="padding: 5px;width:33.3%;text-align:left;font-weight: bold">
                                                         Area</th>
-                                                    <th
-                                                        style="padding: 5px;width:33.3%;text-align:left;font-weight: bold">
+                                                    <th style="padding: 5px;width:33.3%;text-align:left;font-weight: bold">
                                                         Cost</th>
                                                 </tr>
                                                 <tr style="height:30px">
@@ -799,8 +235,7 @@ if (state.data === YT.PlayerState.ENDED) {
                     <div class="col-11 col-sm-6 col-lg-4">
                         <div class="p-3 m-3 project-sec">
                             <div class="overflow">
-                                <img src="https://loremflickr.com/275/480" class="img-size img_opacity"
-                                    alt="img-project">
+                                <img src="https://loremflickr.com/275/480" class="img-size img_opacity" alt="img-project">
                             </div>
                             <p class="subcopy m-2">Metro Jazz, Mahalunge</p>
                             <p class="subcopy m-2">Prices start from 44lkh</p>
@@ -812,8 +247,7 @@ if (state.data === YT.PlayerState.ENDED) {
                     <div class="col-11 col-sm-6 col-lg-4">
                         <div class="p-3 m-3 project-sec">
                             <div class="overflow">
-                                <img src="https://loremflickr.com/275/480" class="img-size img_opacity"
-                                    alt="img-project">
+                                <img src="https://loremflickr.com/275/480" class="img-size img_opacity" alt="img-project">
                             </div>
                             <p class="subcopy m-2">Metro Jazz, Baner</p>
                             <p class="subcopy m-2">Prices start from 48lkh</p>
@@ -825,8 +259,7 @@ if (state.data === YT.PlayerState.ENDED) {
                     <div class="col-11 col-sm-6 col-lg-4">
                         <div class="p-3 m-3 project-sec overflow">
                             <div class="overflow">
-                                <img src="https://loremflickr.com/275/480" class="img-size img_opacity"
-                                    alt="img-project">
+                                <img src="https://loremflickr.com/275/480" class="img-size img_opacity" alt="img-project">
                             </div>
                             <p class="subcopy m-2">Metro Jazz, Mahalunge</p>
                             <p class="subcopy m-2">Prices start from 52lkh</p>
@@ -839,48 +272,45 @@ if (state.data === YT.PlayerState.ENDED) {
             </div>
 
             <div class="container">
-                    <div class="row">
-                        <div class="col-11 col-sm-6 col-lg-4">
-                            <div class="p-3 m-3 project-sec">
-                                <div class="overflow">
-                                    <img src="https://loremflickr.com/275/480" class="img-size img_opacity"
-                                        alt="img-project">
-                                </div>
-                                <p class="subcopy m-2">Metro Jazz, Baner</p>
-                                <p class="subcopy m-2">Prices start from 44lkh</p>
-                                <p class="subcta" align="center">
-                                    <button type="button" href="#" class="a learn-more">Learn More</button>
-                                </p>
+                <div class="row">
+                    <div class="col-11 col-sm-6 col-lg-4">
+                        <div class="p-3 m-3 project-sec">
+                            <div class="overflow">
+                                <img src="https://loremflickr.com/275/480" class="img-size img_opacity" alt="img-project">
                             </div>
+                            <p class="subcopy m-2">Metro Jazz, Baner</p>
+                            <p class="subcopy m-2">Prices start from 44lkh</p>
+                            <p class="subcta" align="center">
+                                <button type="button" href="#" class="a learn-more">Learn More</button>
+                            </p>
                         </div>
-                        <div class="col-11 col-sm-6 col-lg-4">
-                            <div class="p-3 m-3 project-sec">
-                                <div class="overflow">
-                                    <img src="https://loremflickr.com/275/480" class="img-size img_opacity"
-                                        alt="img-project">
-                                </div>
-                                <p class="subcopy m-2">Metro Jazz, Sus Gaon</p>
-                                <p class="subcopy m-2">Prices start from 48lkh</p>
-                                <p class="subcta" align="center">
-                                    <button type="button" href="#" class="a learn-more">Learn More</button>
-                                </p>
+                    </div>
+                    <div class="col-11 col-sm-6 col-lg-4">
+                        <div class="p-3 m-3 project-sec">
+                            <div class="overflow">
+                                <img src="https://loremflickr.com/275/480" class="img-size img_opacity" alt="img-project">
                             </div>
+                            <p class="subcopy m-2">Metro Jazz, Sus Gaon</p>
+                            <p class="subcopy m-2">Prices start from 48lkh</p>
+                            <p class="subcta" align="center">
+                                <button type="button" href="#" class="a learn-more">Learn More</button>
+                            </p>
                         </div>
-                        <div class="col-11 col-sm-6 col-lg-4">
-                            <div class="p-3 m-3 project-sec overflow">
-                                <div class="overflow">
-                                    <img src="https://loremflickr.com/275/480" class="img-size img_opacity"
-                                        alt="img-project">
-                                </div>
-                                <p class="subcopy m-2">Metro Jazz, Mahalunge</p>
-                                <p class="subcopy m-2">Prices start from 52lkh</p>
-                                <p class="subcta" align="center">
-                                    <button type="button" href="#" class="a learn-more">Learn More</button>
-                                </p>
+                    </div>
+                    <div class="col-11 col-sm-6 col-lg-4">
+                        <div class="p-3 m-3 project-sec overflow">
+                            <div class="overflow">
+                                <img src="https://loremflickr.com/275/480" class="img-size img_opacity" alt="img-project">
                             </div>
+                            <p class="subcopy m-2">Metro Jazz, Mahalunge</p>
+                            <p class="subcopy m-2">Prices start from 52lkh</p>
+                            <p class="subcta" align="center">
+                                <button type="button" href="#" class="a learn-more">Learn More</button>
+                            </p>
                         </div>
                     </div>
                 </div>
+            </div>
 
             <div class="row">
                 <h3><b style="font-weight: bold;letter-spacing: -2px;" class="head_subtext">Some more upcoming
@@ -919,48 +349,38 @@ if (state.data === YT.PlayerState.ENDED) {
 
         <div id="CAREERS" class="container scrollable" style="margin-top: 60px;min-width: 614px;">
             <div class="row row-flex justify-content-center">
-                <div class="col-11 col-lg-4 visible-desk overflow">
-                    <img src="https://www.tapestry.com/wp-content/uploads/2017/10/Leadership_Landing_Small_NEW_2x.jpg"
-                        alt="" class="img-size img_opacity">
+                <div class="col-11 col-lg-4 visible-desk overflow img-lr-container">
+                    <img src="https://www.tapestry.com/wp-content/uploads/2017/10/Leadership_Landing_Small_NEW_2x.jpg" alt="" class="img-size img_opacity img-ltr-1">
                 </div>
                 <div class="col-12 col-md-4" style="margin-top: 10%;">
                     <b style="font-weight: bold;letter-spacing: -2px;" class="head_subtext">CAREERS</b>
-                    <hr
-                        style="border-bottom: 4px solid antiquewhite;margin-top: 5px;width: 22%;margin-bottom: 10px;margin-left: 0px;">
+                    <hr style="border-bottom: 4px solid antiquewhite;margin-top: 5px;width: 22%;margin-bottom: 10px;margin-left: 0px;">
                     <p style="line-height: 1.5;" class="subcopy">
-                        We believe that with hard work and determination, anything is possible. Our culture is rooted in
-                        the belief that we create
-                        our own destiny, and we strive to create opportunities for success and growth in everything we
-                        do.</p>
+                        We believe that with hard work and determination, anything is possible. Our culture is rooted in the belief that we create our own destiny, and we strive to create opportunities for success and growth in everything we do.
+                    </p>
                     <a href="#" style="text-decoration: none;letter-spacing: 1px;" class="subcta">LEARN MORE
                         <span style="margin-left: 10px;font-size: 20px;font-weight: bolder;">&#8250;</span>
                     </a>
-                    <hr
-                        style="border-bottom: 3px solid black;width: 40%;margin-bottom: 10px;margin-left: 0px;margin-top: 0px;">
+                    <hr style="border-bottom: 3px solid black;width: 40%;margin-bottom: 10px;margin-left: 0px;margin-top: 0px;">
                 </div>
                 <div class="col-11 col-lg-4 overflow">
-                    <img src="https://www.tapestry.com/wp-content/uploads/2017/08/Careers_Landing_New_2x.jpg" alt=""
-                        class="img-size img_opacity">
+                    <img src="https://www.tapestry.com/wp-content/uploads/2017/08/Careers_Landing_New_2x.jpg" alt="" class="img-size img_opacity">
                 </div>
             </div>
         </div>
 
-        <div id="CONTACT" class="container scrollable"
-            style="margin-top: 70px;min-width: 480px;background-color: antiquewhite;">
+        <div id="CONTACT" class="container scrollable" style="margin-top: 70px;min-width: 480px;background-color: antiquewhite;">
             <div class="row">
-                <div class="col-12 col-sm-11 col-lg-5 col-xl-4 mt-3 left_align"
-                    style="padding-top: 2%;padding-bottom: 2%;">
+                <div class="col-12 col-sm-11 col-lg-5 col-xl-4 mt-3 left_align" style="padding-top: 2%;padding-bottom: 2%;">
                     <b style="font-size: 35px;line-height: 1.1;font-weight: bolder;" class="head_subtext">INTERESTED IN
                         GETTING IN TOUCH? WE'D LOVE TO HEAR FROM YOU.</b>
                 </div>
-                <div class="col-12 col-sm-11 col-lg-5 col-xl-3 mt-3 left_align_subcta"
-                    style="padding-top: 11%;padding-bottom: 2%;margin-left: 5%;">
-                    <a href="#" style="text-decoration: none;" class="subcta">CONTACT
+                <div class="col-12 col-sm-11 col-lg-5 col-xl-3 mt-3 left_align_subcta" style="padding-top: 11%;padding-bottom: 2%;margin-left: 5%;">
+                    <a target="_blank" href="contact_page.html" style="text-decoration: none;" class="subcta">CONTACT
                         US
                         <span style="margin-left: 60px;font-size: 20px;font-weight: bolder;">&#8250;</span>
                     </a>
-                    <hr
-                        style="border-bottom: 3px solid black;width: 68%;margin-bottom: 10px;margin-left: 0px;margin-top: 0px;">
+                    <hr style="border-bottom: 3px solid black;width: 68%;margin-bottom: 10px;margin-left: 0px;margin-top: 0px;">
                 </div>
 
             </div>
@@ -971,76 +391,20 @@ if (state.data === YT.PlayerState.ENDED) {
 
     <!--Video Model-->
     <!-- Modal HTML -->
-    <div id="myModal" class="modal fade">
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content" style="background-color: transparent;border: 0px;">
-                <div class="modal-header" style="border: none;">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body" style="padding-top: 0px;">
-                    <iframe width="100%" height: 50%; controls src="https://youtu.be/nh1aIMdDBp0">
-                    </iframe>
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <div>
+                        <iframe width="100%" height="500" src=""></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-        $(document).ready(function () {
-
-            var e = $(window).height();
-            $(window).scroll(function () {
-                var n = $(window).scrollTop(),
-                    o = e + n;
-                $('.scrollable').each(function (e, n) {
-                    var i = $(n).offset().top - 80;
-                    o >= i ? $(n).addClass('slide_effect') : o <= i && $(n).removeClass('slide_effect')
-                })
-            })
-        })
-
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $('.launch-modal').click(function () {
-                $('.firstBlur').addClass('modalBlur');
-                $('#myModal').modal({
-                    backdrop: 'static'
-                });
-            });
-            $('.close').click(function () {
-                $('.firstBlur').removeClass('modalBlur');
-            });
-        });
-
-        (function ($) {
-            $.fn.visible = function (partial) {
-                var $t = $(this),
-                    $w = $(window),
-                    viewTop = $w.scrollTop(),
-                    viewBottom = viewTop + $w.height(),
-                    top = $t.offset().top,
-                    bottom = top + $t.height(),
-                    compareTop = partial === true ? bottom : top,
-                    compareBottom = partial === true ? top : bottom;
-
-                return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-
-            };
-        })(jQuery);
-
-        $(window).scroll(function (event) {
-            $(".img_opacity").each(function (i, el) {
-                var el = $(el);
-                if (el.visible(false)) {
-                    el.css("opacity", "1");
-                } else {
-                    el.css("opacity", "0.8");
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact us</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="contactUs">
+        <h1 style="text-align: center;"><b>Contact us</b></h1>
+        <div class="">
+            <form id="contact_form" method="post">
+                <h5 style="text-align: center;">Please enter the details below to get in touch with us !</h5>
+                <div>
+                    <p class="input-label">Name<span class="req-item">*</span>:</p>
+                    <input class="input-item" type="text" name="name" id="name" onfocus="$('#e-one').html('')" autocomplete="off">
+                    <p id="e-one" class="req-item"></p>
+                </div>
+                <div>
+                    <p class="input-label">Contact<span class="req-item">*</span>:</p>
+                    <input class="input-item" type="text" name="contact" id="contact" onfocus="$('#e-two').html('')">
+                    <p id="e-two" class="req-item"></p>
+                </div>
+                <div>
+                    <p class="input-label">Email<span class="req-item">*</span>:</p>
+                    <input class="input-item" type="text" name="email" id="email" onfocus="$('#e-three').html('')">
+                    <p id="e-three" class="req-item"></p>
+                </div>
+                <div>
+                    <p class="input-label">Masseage<span class="req-item">*</span>:</p>
+                    <textarea class="input-item" name="msg" rows="5" cols="20" id="msg" onfocus="$('#e-four').html('')"></textarea>
+                    <p id="e-four" class="req-item"></p>
+                </div>
+                <div>
+                    <input type="button" class="btn" name="submit" value="submit" onclick="saveDetails()">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
