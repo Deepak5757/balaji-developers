@@ -38,7 +38,7 @@ body a {
 
 .firstBlur .second-tile {
     z-index: 1;
-    margin-top: 17vh !important;
+    margin-top: 30vh !important;
     position: relative;
 }
 
@@ -80,43 +80,6 @@ body a {
 .navbar-light .navbar-nav .nav-link:hover {
     color: #fff !important;
 }
-
-
-/* .navbar-temp .navbar-container {
-    display: grid;
-    background-color: antiquewhite;
-}
-
-.navbar-temp .navbar-container .row.row-flex {
-    display: grid;
-    grid-template-columns: 20% 80%;
-}
-
-.navbar-temp .navbar-container .logo {
-    width: 90%;
-    margin: 0px 0px 0px 40px;
-}
-
-.navbar-temp .navbar-container .menu-main-menu-container-temp {
-    float: right !important;
-    padding-top: 65px;
-}
-
-.navbar-temp .navbar-container .menu-main-menu-container-temp li {
-    display: inline-block;
-    margin-right: 30px;
-    position: static;
-    float: left;
-    padding: -1px 0px 0 0px;
-}
-
-.navbar-temp .navbar-container .menu-main-menu-container-temp li a {
-    text-decoration: none;
-    padding: 0;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: normal;
-} */
 
 .scrollable {
     transform: translateY(120px);
