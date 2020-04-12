@@ -113,16 +113,16 @@ $(document).ready(function() {
     };
 })(jQuery);
 
-$(window).scroll(function(event) {
-    $(".img_opacity").each(function(i, el) {
-        var el = $(el);
-        if (el.visible(false)) {
-            el.css("opacity", "1");
-        } else {
-            el.css("opacity", "0");
-        }
-    });
-});
+// $(window).scroll(function(event) {
+//     $(".img_opacity").each(function(i, el) {
+//         var el = $(el);
+//         if (el.visible(false)) {
+//             el.css("opacity", "1");
+//         } else {
+//             el.css("opacity", "0");
+//         }
+//     });
+// });
 
 // Kirti code
 function saveDetails() {
