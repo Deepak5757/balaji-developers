@@ -127,6 +127,13 @@ img.img-size.img_opacity {
     background: linear-gradient(45deg, #941111, transparent);
 }
 
+.marque {
+    font-size: 3em;
+    line-height: normal;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+}
+
 
 /* first section modal and video inline end */
 
